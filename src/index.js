@@ -1,8 +1,8 @@
-import app from './app.js'
-import { PORT } from './config.js'
-import db from './db.js'
-
+import app from './app.js';
+import { PORT } from './config.js';
+import ngrok from 'ngrok';
 
 app.listen(PORT, () => {
-    console.log(">> Backend contectado correctamente <<")
-})
+    console.log(`Servidor Express corriendo en el puerto ${PORT}`);
+    console.log(">> Backend conectado correctamente <<");
+});
