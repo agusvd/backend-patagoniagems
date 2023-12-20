@@ -37,7 +37,7 @@ router.post("/checkout", async (req, res) => {
                 success: "http://localhost:5173/success",
                 failure: "http://localhost:5173/failure",
             },
-            notification_url: "https://dc56-200-72-240-47.ngrok-free.app/webhook",
+            notification_url: "https://6017-200-73-92-111.ngrok-free.app/webhook",
             auto_return: 'approved',
         };
         const respuesta = await mercadopago.preferences.create(preference);

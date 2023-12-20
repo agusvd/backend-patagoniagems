@@ -35,15 +35,14 @@ router.get("/blog/post/:id", (req, res) => {
 
 //AÑADIR NUEVO POST
 router.post("/blog/create", (req, res) => {
-    const { titulo, descripcion, img, fechaPublicacion } = req.body;
+    const { titulo, descripcion, img } = req.body;
 
-    const q = "INSERT INTO blog (titulo, descripcion, img, fechaPublicacion) VALUES (?, ?, ?, ?)"
+    const q = "INSERT INTO blog (titulo, descripcion, img) VALUES (?, ?, ?)"
 
     const values = [
         req.body.titulo,
         req.body.descripcion,
         req.body.img || null,
-        req.body.fechaPublicacion || null,
     ]
 
     db.query(q, values, (err, data) => {
